@@ -1,18 +1,14 @@
 using System.Collections;
 using System.Collections.Generic;
+using Microsoft.Unity.VisualStudio.Editor;
 using UnityEngine;
 
-public class TruthSeekers : MonoBehaviour
+public class TruthSeekers : ScriptableObject
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    string characterName;
+    Image characterSprite;
+    string characterProblem;
+    string characterSolutions;
+    string characterDialogue;
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 }

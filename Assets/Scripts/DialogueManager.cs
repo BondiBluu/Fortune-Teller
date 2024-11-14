@@ -8,9 +8,11 @@ public class DialogueManager : MonoBehaviour
     [SerializeField] GameObject character;
     public GameObject dialogueBox;
     public TMP_Text dialogueText;
+    CutsceneManager cutsceneManager;
     // Start is called before the first frame update
     void Start()
     {
+        cutsceneManager = FindObjectOfType<CutsceneManager>();
         character.SetActive(false);
         StartCoroutine(KnockOnDoor());
     }
@@ -20,5 +22,8 @@ public class DialogueManager : MonoBehaviour
         yield return new WaitForSeconds(1.0f);
         Debug.Log("Knock on door");
         character.SetActive(true);
+        cutsceneManager.KnockOnDoor();
+        yield return new WaitUntil(() => cutsceneManager.isPlaying);
+        Debug.Log("Done.");
     }
 }

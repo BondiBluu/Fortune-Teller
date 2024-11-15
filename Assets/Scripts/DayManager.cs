@@ -8,10 +8,12 @@ public class DayManager : MonoBehaviour
     public int currentDay = 0;
     public int currentCharacter = 0;
     DialogueManager dialogueManager;
+    MailManager mailManager;
 
     void Start()
     {
         dialogueManager = FindObjectOfType<DialogueManager>();
+        mailManager = FindObjectOfType<MailManager>();
     }
 
     //cycle through each character in a day
@@ -30,7 +32,10 @@ public class DayManager : MonoBehaviour
             {
                 currentDay++;
                 currentCharacter = 0;
-                StartCoroutine(dialogueManager.ComeIntoRoom());
+                mailManager.OpenMessageList();
+                Debug.Log("Opening Mail");
+
+                // StartCoroutine(dialogueManager.ComeIntoRoom());
 
             }
             else

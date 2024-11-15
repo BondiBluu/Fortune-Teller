@@ -13,7 +13,7 @@ public class MoralityChoices : ScriptableObject
     }
     [SerializeField] MoralChoice morality;
     [SerializeField] string choice;
-    [TextArea (3, 10)]
+    [TextArea (30, 10)]
     [SerializeField] string response;
 
     public MoralChoice Morality {get {return morality;}}

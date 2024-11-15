@@ -36,6 +36,7 @@ public class DialogueManager : MonoBehaviour
 
     public IEnumerator ComeIntoRoom()
     {
+        EnableButtons();
         yield return new WaitForSeconds(1.0f);
         Debug.Log("Knock on door");
         character.SetActive(true);
@@ -63,6 +64,7 @@ public class DialogueManager : MonoBehaviour
     }
 
     public IEnumerator AnswerQuestion(int day, int character, int choice){
+        DisableButtons();
         yield return new WaitForSeconds(2.0f);
         questionBox.SetActive(false);
         dialogueBox.SetActive(true);
@@ -106,6 +108,18 @@ public class DialogueManager : MonoBehaviour
         character.SetActive(false);
 
         dayManager.NextCharacter();
+    }
+
+    public void DisableButtons(){
+        foreach(Button button in choiceButtons){
+            button.interactable = false;
+        }
+    }
+
+    public void EnableButtons(){
+        foreach(Button button in choiceButtons){
+            button.interactable = true;
+        }
     }
 }
 

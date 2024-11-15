@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-[CreateAssetMenu(fileName = "CharacterChoices", menuName = "Choices/Make Character Choices")]
+[CreateAssetMenu(fileName = "New Problem", menuName = "Choices/Make Character Problem")]
 public class Choices : ScriptableObject
 {
     

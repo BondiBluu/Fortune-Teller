@@ -2,8 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-[CreateAssetMenu(fileName = "New Choice", menuName = "Choices/ Create Player Choices")]
-public class MoralityChoices : MonoBehaviour
+[CreateAssetMenu(fileName = "New Choice", menuName = "Choices/ Make Player Choices")]
+public class MoralityChoices : ScriptableObject
 {
     public enum MoralChoice{
         Good,

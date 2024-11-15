@@ -8,16 +8,13 @@ public class CutsceneManager : MonoBehaviour
 {
     [SerializeField] PlayableDirector director;
     public TimelineAsset characterGoesIntoRoom;
-    public bool isPlaying = false;
     
-    public bool KnockOnDoor()
+    public void KnockOnDoor()
     {
-        isPlaying = true;
         //assigning the timeline asset to the director
         director.playableAsset = characterGoesIntoRoom;
 
         //playing the cutscene
         director.Play();
-        return isPlaying;
     }
 }

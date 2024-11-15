@@ -37,20 +37,32 @@ public class DialogueManager : MonoBehaviour
         cutsceneManager.KnockOnDoor();
         yield return new WaitForSeconds((float)cutsceneManager.characterGoesIntoRoom.duration + 1.0f);
         Debug.Log("Done.");
-        DisplayAdviceBox();
+        DisplayAdviceBox(dayManager.currentDay, dayManager.currentCharacter);
     }
 
-    public void DisplayAdviceBox(){
+    public void DisplayAdviceBox(int day, int character){
         questionBox.SetActive(true);
-        Day dayOne = dayManager.days[0];
-        characterName.text = dayOne.Characters[0].CName;
-        charaAge.text = $"Age: {dayOne.Characters[0].Age}";
-        charaOccupation.text = dayOne.Characters[0].Occupation;
-        charaFact.text = dayOne.Characters[0].Fact;
-        charaQuestion.text = dayOne.Characters[0].Problems.CharacterQuestion;
+        Day currentDay = dayManager.days[day];
+        characterName.text = currentDay.Characters[character].CName;
+        charaAge.text = $"Age: {currentDay.Characters[character].Age}";
+        charaOccupation.text = currentDay.Characters[character].Occupation;
+        charaFact.text = currentDay.Characters[character].Fact;
+        charaQuestion.text = currentDay.Characters[character].Problems.CharacterQuestion;
 
         for(int i = 0; i < choices.Length; i++){
-            choices[i].GetComponentInChildren<TMP_Text>().text = dayOne.Characters[0].Problems.PlayerChoices[i].Choice;
+            choices[i].GetComponentInChildren<TMP_Text>().text = currentDay.Characters[character].Problems.PlayerChoices[i].Choice;
+
+            choices[i].onClick.RemoveAllListeners();
+            choices[i].onClick.AddListener(() => AnswerQuestion(day, character, i));
         }
+    }
+
+    public IEnumerator AnswerQuestion(int day, int character, int choice){
+        yield return new WaitForSeconds(2.0f);
+        questionBox.SetActive(false);
+        dialogueBox.SetActive(true);
+        
+        
+
     }
 }

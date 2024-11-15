@@ -11,6 +11,6 @@ public class Choices : ScriptableObject
     [SerializeField] string characterResponse;
 
     public string CharacterQuestion {get {return characterQuestion;}}
-    public MoralityChoices[] PlayerChoice {get {return playerChoices;}}
+    public MoralityChoices[] PlayerChoices {get {return playerChoices;}}
     public string CharacterResponse {get {return characterResponse;}}
 }

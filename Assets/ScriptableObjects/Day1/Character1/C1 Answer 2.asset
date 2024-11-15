@@ -13,4 +13,4 @@ MonoBehaviour:
   m_Name: C1 Answer 2
   m_EditorClassIdentifier: 
   morality: 1
-  choice: Have you checked
+  choice: Have you checked yourself?

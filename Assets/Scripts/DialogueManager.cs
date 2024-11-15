@@ -49,6 +49,8 @@ public class DialogueManager : MonoBehaviour
         charaFact.text = dayOne.Characters[0].Fact;
         charaQuestion.text = dayOne.Characters[0].Problems.CharacterQuestion;
 
-        
+        for(int i = 0; i < choices.Length; i++){
+            choices[i].GetComponentInChildren<TMP_Text>().text = dayOne.Characters[0].Problems.PlayerChoices[i].Choice;
+        }
     }
 }

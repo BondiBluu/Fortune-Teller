@@ -7,6 +7,12 @@ public class DayManager : MonoBehaviour
     public List<Day> days = new List<Day>();
     public int currentDay = 0;
     public int currentCharacter = 0;
+    DialogueManager dialogueManager;
+
+    void Start()
+    {
+        dialogueManager = FindObjectOfType<DialogueManager>();
+    }
 
     //cycle through each character in a day
     public void NextCharacter()
@@ -15,15 +21,21 @@ public class DayManager : MonoBehaviour
         if(currentCharacter < days[currentDay].Characters.Count - 1)
         {
             currentCharacter++;
+            StartCoroutine(dialogueManager.ComeIntoRoom());
         }
         else
         {
-            currentCharacter = 0;
-
-            //if there are more days, move to the next day
+            //if there are more days, move to the next day. If not, end the game.
             if(currentDay < days.Count - 1)
             {
                 currentDay++;
+                currentCharacter = 0;
+                StartCoroutine(dialogueManager.ComeIntoRoom());
+
+            }
+            else
+            {
+                Debug.Log("Game Over");
             }
         }
     }

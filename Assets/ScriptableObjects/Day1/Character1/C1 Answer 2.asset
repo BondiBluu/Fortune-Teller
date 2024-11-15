@@ -14,3 +14,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   morality: 1
   choice: Have you checked yourself?
+  response: Oh, should I?

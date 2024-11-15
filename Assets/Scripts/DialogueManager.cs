@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Net.Mail;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
@@ -27,11 +28,11 @@ public class DialogueManager : MonoBehaviour
         dayManager = FindObjectOfType<DayManager>();
         choiceManager = FindObjectOfType<ChoiceManager>();
         character.SetActive(false);
-        StartCoroutine(KnockOnDoor());
+        StartCoroutine(ComeIntoRoom());
         questionBox.SetActive(false);
     }
 
-    public IEnumerator KnockOnDoor()
+    public IEnumerator ComeIntoRoom()
     {
         yield return new WaitForSeconds(1.0f);
         Debug.Log("Knock on door");
@@ -92,11 +93,13 @@ public class DialogueManager : MonoBehaviour
     }
 
     public IEnumerator LeaveRoom(){
-        yield return new WaitForSeconds(1.0f);
+        yield return new WaitForSeconds(3.0f);
         dialogueBox.SetActive(false);
         cutsceneManager.PlayScene(cutsceneManager.characterLeavesRoom);
         yield return new WaitForSeconds((float)cutsceneManager.characterLeavesRoom.duration + 1.0f);
         character.SetActive(false);
+
+        dayManager.NextCharacter();
     }
 }
 

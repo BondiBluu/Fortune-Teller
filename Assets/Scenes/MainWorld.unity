@@ -527,6 +527,7 @@ GameObject:
   - component: {fileID: 219670870}
   - component: {fileID: 219670871}
   - component: {fileID: 219670872}
+  - component: {fileID: 219670873}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -643,7 +644,7 @@ MonoBehaviour:
   charaOccupation: {fileID: 510846726}
   charaFact: {fileID: 1611052772}
   charaQuestion: {fileID: 1810364088}
-  choices:
+  choiceButtons:
   - {fileID: 200854775}
   - {fileID: 1812722457}
   - {fileID: 1500073873}
@@ -662,7 +663,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   director: {fileID: 1307027958}
   characterGoesIntoRoom: {fileID: 11400000, guid: e9c699df887b0a045951e55f66171c5d, type: 2}
-  isPlaying: 0
 --- !u!114 &219670872
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -679,6 +679,23 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 37a2cc0b896e88242856cd194aeb39d7, type: 2}
   - {fileID: 11400000, guid: 815afad8da80fd44e83dd47b5e4559f5, type: 2}
   currentDay: 0
+  currentCharacter: 0
+--- !u!114 &219670873
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 219670865}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 12b28e15d454d9f47ad0b33df8d6d1d2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  goodChoiceTally: 0
+  fineChoiceTally: 0
+  badChoiceTally: 0
+  evilChoiceTally: 0
 --- !u!1 &419364178
 GameObject:
   m_ObjectHideFlags: 0

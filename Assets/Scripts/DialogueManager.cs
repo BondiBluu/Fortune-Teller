@@ -15,8 +15,9 @@ public class DialogueManager : MonoBehaviour
     [SerializeField] TMP_Text charaOccupation;
     [SerializeField] TMP_Text charaFact;
     [SerializeField] TMP_Text charaQuestion;
-    [SerializeField] Button[] choices;
+    [SerializeField] Button[] choiceButtons;
     DayManager dayManager;
+    ChoiceManager choiceManager;
 
     CutsceneManager cutsceneManager;
     // Start is called before the first frame update
@@ -24,6 +25,7 @@ public class DialogueManager : MonoBehaviour
     {
         cutsceneManager = FindObjectOfType<CutsceneManager>();
         dayManager = FindObjectOfType<DayManager>();
+        choiceManager = FindObjectOfType<ChoiceManager>();
         character.SetActive(false);
         StartCoroutine(KnockOnDoor());
         questionBox.SetActive(false);
@@ -49,11 +51,12 @@ public class DialogueManager : MonoBehaviour
         charaFact.text = currentDay.Characters[character].Fact;
         charaQuestion.text = currentDay.Characters[character].Problems.CharacterQuestion;
 
-        for(int i = 0; i < choices.Length; i++){
-            choices[i].GetComponentInChildren<TMP_Text>().text = currentDay.Characters[character].Problems.PlayerChoices[i].Choice;
+        for(int i = 0; i < choiceButtons.Length; i++){
+            int choiceIndex = i;
+            choiceButtons[i].GetComponentInChildren<TMP_Text>().text = currentDay.Characters[character].Problems.PlayerChoices[i].Choice;
 
-            choices[i].onClick.RemoveAllListeners();
-            choices[i].onClick.AddListener(() => AnswerQuestion(day, character, i));
+            choiceButtons[i].onClick.RemoveAllListeners();
+            choiceButtons[i].onClick.AddListener(() => StartCoroutine(AnswerQuestion(day, character, choiceIndex)));
         }
     }
 
@@ -61,8 +64,29 @@ public class DialogueManager : MonoBehaviour
         yield return new WaitForSeconds(2.0f);
         questionBox.SetActive(false);
         dialogueBox.SetActive(true);
-        
-        
 
+        dialogueText.text = dayManager.days[day].Characters[character].Problems.CharacterResponse;
+
+        MoralityChoices.MoralChoice morality = dayManager.days[day].Characters[character].Problems.PlayerChoices[choice].Morality;
+
+        switch(morality){
+            case MoralityChoices.MoralChoice.Good:
+                choiceManager.goodChoiceTally++;
+            break;
+            case MoralityChoices.MoralChoice.Fine:
+                choiceManager.fineChoiceTally++;
+            break;
+            case MoralityChoices.MoralChoice.Bad:
+                choiceManager.badChoiceTally++;
+            break;
+            case MoralityChoices.MoralChoice.Evil:
+                choiceManager.evilChoiceTally++;
+            break;
+            default:
+                Debug.Log("Morality choice not found.");
+            break;
+         }
+
+         Debug.Log($"Good Choices: {choiceManager.goodChoiceTally}, Fine Choices: {choiceManager.fineChoiceTally}, Bad Choices: {choiceManager.badChoiceTally}, Evil Choices: {choiceManager.evilChoiceTally}");
     }
 }

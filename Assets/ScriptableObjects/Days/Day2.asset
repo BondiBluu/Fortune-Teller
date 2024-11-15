@@ -9,11 +9,8 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 95517c1769d9c1946b3bfc8688ddeb84, type: 3}
-  m_Name: Character 1
+  m_Script: {fileID: 11500000, guid: 920c1998ce03b2a4687d7c9af4dd51a7, type: 3}
+  m_Name: Day2
   m_EditorClassIdentifier: 
-  cName: C 1
-  fact: Fact here
-  age: 23
-  occupation: My Occ
-  problems: {fileID: 11400000, guid: 5c10263fb84c87d4da0c0304b1ae20f0, type: 2}
+  characters:
+  - {fileID: 11400000, guid: d1871934c08ae7a419d0f1ff987d95b1, type: 2}

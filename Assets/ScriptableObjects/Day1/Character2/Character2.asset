@@ -14,7 +14,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cName: C2
   fact: Has, indeed, a fact
-  age: 12
+  age: 8
   occupation: Hm?
-  problems:
-  - {fileID: 0}
+  problems: {fileID: 11400000, guid: f4b4bb0eca30d794281766f7a80660bf, type: 2}

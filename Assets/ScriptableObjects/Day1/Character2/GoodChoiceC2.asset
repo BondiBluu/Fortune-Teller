@@ -13,4 +13,4 @@ MonoBehaviour:
   m_Name: GoodChoiceC2
   m_EditorClassIdentifier: 
   morality: 0
-  choice: 
+  choice: Yea

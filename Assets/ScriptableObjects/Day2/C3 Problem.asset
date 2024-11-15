@@ -10,12 +10,12 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 7ac07f476d9cb074c9f9d24454b706f8, type: 3}
-  m_Name: C2Problem
+  m_Name: C3 Problem
   m_EditorClassIdentifier: 
-  characterQuestion: Can I count to 10?
+  characterQuestion: Will I M6 Jane?
   playerChoices:
-  - {fileID: 11400000, guid: bbdb3b9d7ee6708438287dde0b289953, type: 2}
-  - {fileID: 11400000, guid: 47d55af9032cb794c96bd7c022f2bed6, type: 2}
-  - {fileID: 11400000, guid: 1df9f995c7559444aa86f5f7588399bb, type: 2}
-  - {fileID: 11400000, guid: f697d9e7a8484e14b8017fb88da45f95, type: 2}
-  characterResponse: Ah...ok!
+  - {fileID: 11400000, guid: 3f1a19bb7f691204391294df0fbd32ae, type: 2}
+  - {fileID: 11400000, guid: 085dc03317726f3478e841364d3f153d, type: 2}
+  - {fileID: 11400000, guid: 7a8d65e767bdee54f8777dd265bcd71f, type: 2}
+  - {fileID: 11400000, guid: c0156005770fd234aa178e01c6365d9c, type: 2}
+  characterResponse: Hm....

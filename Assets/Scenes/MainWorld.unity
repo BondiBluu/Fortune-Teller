@@ -663,6 +663,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   director: {fileID: 1307027958}
   characterGoesIntoRoom: {fileID: 11400000, guid: e9c699df887b0a045951e55f66171c5d, type: 2}
+  characterLeavesRoom: {fileID: 11400000, guid: 5bcb686b3632e534f86d3163cfb18e29, type: 2}
 --- !u!114 &219670872
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1697,13 +1698,17 @@ PlayableDirector:
   m_GameObject: {fileID: 1307027957}
   m_Enabled: 1
   serializedVersion: 3
-  m_PlayableAsset: {fileID: 11400000, guid: e9c699df887b0a045951e55f66171c5d, type: 2}
+  m_PlayableAsset: {fileID: 11400000, guid: 5bcb686b3632e534f86d3163cfb18e29, type: 2}
   m_InitialState: 1
   m_WrapMode: 2
   m_DirectorUpdateMode: 1
   m_InitialTime: 0
   m_SceneBindings:
   - key: {fileID: -7770565238282061580, guid: e9c699df887b0a045951e55f66171c5d, type: 2}
+    value: {fileID: 1637210558}
+  - key: {fileID: 0}
+    value: {fileID: 1637210558}
+  - key: {fileID: 8728275884724982358, guid: 5bcb686b3632e534f86d3163cfb18e29, type: 2}
     value: {fileID: 1637210558}
   m_ExposedReferences:
     m_References: []

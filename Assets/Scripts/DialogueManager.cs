@@ -36,9 +36,8 @@ public class DialogueManager : MonoBehaviour
         yield return new WaitForSeconds(1.0f);
         Debug.Log("Knock on door");
         character.SetActive(true);
-        cutsceneManager.KnockOnDoor();
+        cutsceneManager.PlayScene(cutsceneManager.characterGoesIntoRoom);
         yield return new WaitForSeconds((float)cutsceneManager.characterGoesIntoRoom.duration + 1.0f);
-        Debug.Log("Done.");
         DisplayAdviceBox(dayManager.currentDay, dayManager.currentCharacter);
     }
 
@@ -88,5 +87,17 @@ public class DialogueManager : MonoBehaviour
          }
 
          Debug.Log($"Good Choices: {choiceManager.goodChoiceTally}, Fine Choices: {choiceManager.fineChoiceTally}, Bad Choices: {choiceManager.badChoiceTally}, Evil Choices: {choiceManager.evilChoiceTally}");
+
+         StartCoroutine(LeaveRoom());
+    }
+
+    public IEnumerator LeaveRoom(){
+        yield return new WaitForSeconds(1.0f);
+        dialogueBox.SetActive(false);
+        cutsceneManager.PlayScene(cutsceneManager.characterLeavesRoom);
+        yield return new WaitForSeconds((float)cutsceneManager.characterLeavesRoom.duration + 1.0f);
+        character.SetActive(false);
     }
 }
+
+

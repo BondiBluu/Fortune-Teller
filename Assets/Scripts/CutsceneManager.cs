@@ -7,7 +7,7 @@ using UnityEngine.Timeline;
 public class CutsceneManager : MonoBehaviour
 {
     [SerializeField] PlayableDirector director;
-    [SerializeField] TimelineAsset characterGoesIntoRoom;
+    public TimelineAsset characterGoesIntoRoom;
     public bool isPlaying = false;
     
     public bool KnockOnDoor()

@@ -14,8 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   characterQuestion: Are dogs real?
   playerChoices:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
+  - {fileID: 11400000, guid: be6c0ea1cd23e604d9b13ee04ca5e809, type: 2}
+  - {fileID: 11400000, guid: 574e97d0a551bf14cb0b7cb7ed07c333, type: 2}
+  - {fileID: 11400000, guid: 42687b464c1c4d548b3012457d305249, type: 2}
+  - {fileID: 11400000, guid: b18709d9514a8c547923b8f10e945d56, type: 2}
   characterResponse: Oh, I see.

@@ -2,8 +2,10 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-[CreateAssetMenu(fileName = "New Day", menuName = "Days/Make New Day", order = 1)]
+[CreateAssetMenu(fileName = "New Day", menuName = "Days/Make New Day")]
 public class Day : ScriptableObject
 {
-    public List<TruthSeekers> characters = new List<TruthSeekers>();
+    [SerializeField] List<TruthSeekers> characters = new List<TruthSeekers>();
+
+    public List<TruthSeekers> Characters {get {return characters;}}
 }

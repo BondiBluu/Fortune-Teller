@@ -12,5 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 06cf4615c5d202a41862aa8b93a04f73, type: 3}
   m_Name: C1 Answer 2
   m_EditorClassIdentifier: 
-  morality: 0
-  choice: 
+  morality: 1
+  choice: Have you checked

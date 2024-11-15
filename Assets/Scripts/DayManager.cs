@@ -4,4 +4,5 @@ using UnityEngine;
 
 public class DayManager : MonoBehaviour
 {
+    List<Day> days = new List<Day>();
 }

@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 06cf4615c5d202a41862aa8b93a04f73, type: 3}
-  m_Name: C1 Answer 3
+  m_Name: FineChoiceC2
   m_EditorClassIdentifier: 
-  morality: 2
-  choice: Probably not.
+  morality: 0
+  choice: 

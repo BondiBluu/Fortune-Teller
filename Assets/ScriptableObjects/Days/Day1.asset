@@ -9,8 +9,8 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 06cf4615c5d202a41862aa8b93a04f73, type: 3}
-  m_Name: C1 Answer 3
+  m_Script: {fileID: 11500000, guid: 920c1998ce03b2a4687d7c9af4dd51a7, type: 3}
+  m_Name: Day1
   m_EditorClassIdentifier: 
-  morality: 2
-  choice: Probably not.
+  characters:
+  - {fileID: 11400000, guid: dd3a06ae708b8f349b1c5e2bc10e90b6, type: 2}

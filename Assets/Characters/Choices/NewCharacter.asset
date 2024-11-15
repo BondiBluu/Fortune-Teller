@@ -12,3 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 95517c1769d9c1946b3bfc8688ddeb84, type: 3}
   m_Name: NewCharacter
   m_EditorClassIdentifier: 
+  cName: 
+  fact: 
+  age: 0
+  occupation: 
+  problems: []

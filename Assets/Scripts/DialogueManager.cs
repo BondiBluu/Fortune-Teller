@@ -19,6 +19,7 @@ public class DialogueManager : MonoBehaviour
     [SerializeField] Button[] choiceButtons;
     DayManager dayManager;
     ChoiceManager choiceManager;
+    MailManager mailManager;
 
     CutsceneManager cutsceneManager;
     // Start is called before the first frame update
@@ -27,6 +28,7 @@ public class DialogueManager : MonoBehaviour
         cutsceneManager = FindObjectOfType<CutsceneManager>();
         dayManager = FindObjectOfType<DayManager>();
         choiceManager = FindObjectOfType<ChoiceManager>();
+        mailManager = FindObjectOfType<MailManager>();
         character.SetActive(false);
         StartCoroutine(ComeIntoRoom());
         questionBox.SetActive(false);
@@ -65,16 +67,20 @@ public class DialogueManager : MonoBehaviour
         questionBox.SetActive(false);
         dialogueBox.SetActive(true);
 
-        dialogueText.text = dayManager.days[day].Characters[character].Problems.CharacterResponse;
+        TruthSeekers currentCharacter = dayManager.days[day].Characters[character];
 
-        MoralityChoices.MoralChoice morality = dayManager.days[day].Characters[character].Problems.PlayerChoices[choice].Morality;
+        dialogueText.text = currentCharacter.Problems.CharacterResponse;
+
+        MoralityChoices.MoralChoice morality = currentCharacter.Problems.PlayerChoices[choice].Morality;
+
+        mailManager.unreadMail.Add(currentCharacter.Problems.PlayerChoices[choice].Response);        
 
         switch(morality){
             case MoralityChoices.MoralChoice.Good:
                 choiceManager.goodChoiceTally++;
             break;
             case MoralityChoices.MoralChoice.Fine:
-                choiceManager.fineChoiceTally++;
+                choiceManager.fineChoiceTally++; 
             break;
             case MoralityChoices.MoralChoice.Bad:
                 choiceManager.badChoiceTally++;

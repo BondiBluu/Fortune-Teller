@@ -107,7 +107,7 @@ public class DialogueManager : MonoBehaviour
         yield return new WaitForSeconds((float)cutsceneManager.characterLeavesRoom.duration + 1.0f);
         character.SetActive(false);
 
-        dayManager.NextCharacter();
+        StartCoroutine(dayManager.NextCharacter());
     }
 
     public void DisableButtons(){

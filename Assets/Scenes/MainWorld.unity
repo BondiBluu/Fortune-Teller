@@ -665,6 +665,7 @@ MonoBehaviour:
   director: {fileID: 1307027958}
   characterGoesIntoRoom: {fileID: 11400000, guid: e9c699df887b0a045951e55f66171c5d, type: 2}
   characterLeavesRoom: {fileID: 11400000, guid: 5bcb686b3632e534f86d3163cfb18e29, type: 2}
+  nextMorning: {fileID: 11400000, guid: 5b1340c176b77d44095e6c46b35c9d5a, type: 2}
 --- !u!114 &219670872
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -682,6 +683,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 815afad8da80fd44e83dd47b5e4559f5, type: 2}
   currentDay: 0
   currentCharacter: 0
+  nextMorningPanel: {fileID: 1265585178}
 --- !u!114 &219670873
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1664,6 +1666,7 @@ GameObject:
   - component: {fileID: 1265585179}
   - component: {fileID: 1265585181}
   - component: {fileID: 1265585180}
+  - component: {fileID: 1265585182}
   m_Layer: 5
   m_Name: NextMorningPanel
   m_TagString: Untagged
@@ -1688,8 +1691,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_AnchoredPosition: {x: -1.0523987, y: -1.2886047}
+  m_SizeDelta: {x: 8.0331, y: 12.715}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1265585180
 MonoBehaviour:
@@ -1704,7 +1707,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0, g: 0, b: 0, a: 0.392}
+  m_Color: {r: 0, g: 0, b: 0, a: 0}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -1729,6 +1732,27 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1265585178}
   m_CullTransparentMesh: 1
+--- !u!95 &1265585182
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1265585178}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 0}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &1307027957
 GameObject:
   m_ObjectHideFlags: 0
@@ -1755,7 +1779,7 @@ PlayableDirector:
   m_GameObject: {fileID: 1307027957}
   m_Enabled: 1
   serializedVersion: 3
-  m_PlayableAsset: {fileID: 11400000, guid: 5bcb686b3632e534f86d3163cfb18e29, type: 2}
+  m_PlayableAsset: {fileID: 11400000, guid: 5b1340c176b77d44095e6c46b35c9d5a, type: 2}
   m_InitialState: 1
   m_WrapMode: 2
   m_DirectorUpdateMode: 1
@@ -1767,6 +1791,8 @@ PlayableDirector:
     value: {fileID: 1637210558}
   - key: {fileID: 8728275884724982358, guid: 5bcb686b3632e534f86d3163cfb18e29, type: 2}
     value: {fileID: 1637210558}
+  - key: {fileID: 4101190422500336453, guid: 5b1340c176b77d44095e6c46b35c9d5a, type: 2}
+    value: {fileID: 1265585182}
   m_ExposedReferences:
     m_References: []
 --- !u!4 &1307027959
@@ -2490,8 +2516,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4294967295
-  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
+    rgba: 16777215
+  m_fontColor: {r: 1, g: 1, b: 1, a: 0}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:

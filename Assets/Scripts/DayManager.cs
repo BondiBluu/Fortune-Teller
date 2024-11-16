@@ -11,6 +11,7 @@ public class DayManager : MonoBehaviour
     DialogueManager dialogueManager;
     MailManager mailManager;
     CutsceneManager cutsceneManager;
+    public bool gameIsDone = false;
 
     void Start()
     {
@@ -31,7 +32,7 @@ public class DayManager : MonoBehaviour
         else
         {
             //if there are more days, move to the next day. If not, end the game.
-            if(currentDay < days.Count - 1)
+            if(currentDay <= days.Count - 1)
             {
                 currentDay++;
                 currentCharacter = 0;
@@ -42,10 +43,20 @@ public class DayManager : MonoBehaviour
                 mailManager.EnableMailButton();
                 mailManager.CheckIfNewMail();
             }
-            else
-            {
-                Debug.Log("Game Over");
-            }
         }
     }
+
+    public void CheckIfDaysAreDone()
+{
+    if(currentDay > days.Count - 1)
+    {
+        Debug.Log("Game Over");
+        //don't go to NextCharacter if the game is over
+        gameIsDone = true;
+    } else{
+        gameIsDone = false;
+    }
 }
+}
+
+

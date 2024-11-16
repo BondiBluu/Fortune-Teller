@@ -11,6 +11,7 @@ public class DialogueManager : MonoBehaviour
     [SerializeField] GameObject character;
     public GameObject dialogueBox;
     public TMP_Text dialogueText;
+    public TMP_Text nameText;
     [SerializeField] GameObject questionBox;
     [SerializeField] TMP_Text characterName;
     [SerializeField] TMP_Text charaOccupation;
@@ -75,6 +76,7 @@ public class DialogueManager : MonoBehaviour
 
         TruthSeekers currentCharacter = dayManager.days[day].Characters[character];
 
+        nameText.text = currentCharacter.CName;
         dialogueText.text = currentCharacter.Problems.CharacterResponse;
 
         MoralityChoices.MoralChoice morality = currentCharacter.Problems.PlayerChoices[choice].Morality;

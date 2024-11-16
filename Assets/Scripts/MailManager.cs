@@ -77,9 +77,12 @@ public class MailManager : MonoBehaviour
 
     public void CheckIfNewMail(){
         if(unreadMail.Count > 0){
+            numberOfUnreadMailContainer.SetActive(true);
+            numberOfUnreadMailText.text = unreadMail.Count.ToString();
             mailImage.GetComponent<Image>().sprite = mailNotif;
         } 
         else if(unreadMail.Count == 0){
+            numberOfUnreadMailContainer.SetActive(false);
             mailImage.GetComponent<Image>().sprite = mailEmpty;
             closeMailButton.interactable = true;
         }

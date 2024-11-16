@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Net.Mail;
 using TMPro;
 using UnityEngine;
+using UnityEngine.Timeline;
 using UnityEngine.UI;
 
 public class DialogueManager : MonoBehaviour
@@ -120,6 +121,12 @@ public class DialogueManager : MonoBehaviour
         foreach(Button button in choiceButtons){
             button.interactable = true;
         }
+    }
+
+    public IEnumerator PlayScene(TimelineAsset scene){
+        cutsceneManager.PlayScene(scene);
+        yield return new WaitForSeconds((float)scene.duration + 1.0f);
+        
     }
 }
 

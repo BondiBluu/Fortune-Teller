@@ -15,6 +15,8 @@ public class MailManager : MonoBehaviour
     [SerializeField] Button closeMailButton;
     [SerializeField] Sprite mailEmpty;
     [SerializeField] Sprite mailNotif;
+    [SerializeField] GameObject numberOfUnreadMailContainer;
+    [SerializeField] TMP_Text numberOfUnreadMailText;
     public List<string> unreadMail = new List<string>();
     public List<string> readMail = new List<string>();
     DialogueManager dialogueManager;
@@ -23,6 +25,7 @@ public class MailManager : MonoBehaviour
         responseContainer.SetActive(false);
         letterBox.SetActive(false);   
         dialogueManager = FindObjectOfType<DialogueManager>();
+        numberOfUnreadMailContainer.SetActive(false);
     }
 
     public void OpenMessageList(){

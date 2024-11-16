@@ -1,0 +1,20 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 06cf4615c5d202a41862aa8b93a04f73, type: 3}
+  m_Name: LisaQuestion1Good
+  m_EditorClassIdentifier: 
+  morality: 0
+  choice: "There\u2019s someone for everyone. Be ready for yours. "
+  response: "Dear Fortune Teller, \r\n\nI\u2019ve heard the \u2018someone for everyone\u2019
+    thing before and always thought it was silly, but maybe I haven\u2019t given
+    it enough thought. If I\u2019m not ready, what will I do when I find them? I
+    should definitely focus on improving myself.\r\n"

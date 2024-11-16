@@ -13,7 +13,6 @@ public class DialogueManager : MonoBehaviour
     public TMP_Text dialogueText;
     [SerializeField] GameObject questionBox;
     [SerializeField] TMP_Text characterName;
-    [SerializeField] TMP_Text charaAge;
     [SerializeField] TMP_Text charaOccupation;
     [SerializeField] TMP_Text charaFact;
     [SerializeField] TMP_Text charaQuestion;
@@ -53,8 +52,8 @@ public class DialogueManager : MonoBehaviour
     public void DisplayAdviceBox(int day, int character){
         questionBox.SetActive(true);
         Day currentDay = dayManager.days[day];
-        characterName.text = currentDay.Characters[character].CName;
-        charaAge.text = $"Age: {currentDay.Characters[character].Age}";
+        TruthSeekers currentCharacter = currentDay.Characters[character];
+        characterName.text = $"{currentCharacter.CName},{currentCharacter.Age}, ({currentCharacter.Gender})";
         charaOccupation.text = currentDay.Characters[character].Occupation;
         charaFact.text = currentDay.Characters[character].Fact;
         charaQuestion.text = currentDay.Characters[character].Problems.CharacterQuestion;

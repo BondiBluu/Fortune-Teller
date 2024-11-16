@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 06cf4615c5d202a41862aa8b93a04f73, type: 3}
+  m_Name: GoodJanetteDay1
+  m_EditorClassIdentifier: 
+  morality: 0
+  choice: 'People are all works in progress. '
+  response: "Hi, Fortune Teller, \r\n\r\nI\u2019ve been thinking about your answer
+    a lot lately. People are growing at their own pace, and learning comes differently
+    to different people - just like the children I teach. Learning doesn\u2019t stop
+    after school ends, and I feel silly for forgetting that, as a teacher. \r\n\r\nI
+    feel motivated! Thanks a lot!\r\n"

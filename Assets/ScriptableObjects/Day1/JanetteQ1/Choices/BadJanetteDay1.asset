@@ -1,0 +1,20 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 06cf4615c5d202a41862aa8b93a04f73, type: 3}
+  m_Name: BadJanetteDay1
+  m_EditorClassIdentifier: 
+  morality: 2
+  choice: "Just get a cat. They\u2019re way better than people."
+  response: "Hi, Fortune Teller, \r\n\r\nI\u2019m worried you have a point. People
+    are just way too exhausting to keep up with, you know? But I\u2019m also severely
+    allergic to cats\u2026 I guess being a recluse save for teaching is always an
+    option.\r\n\r\nThanks!\r\n"

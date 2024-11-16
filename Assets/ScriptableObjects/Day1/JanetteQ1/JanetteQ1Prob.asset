@@ -1,0 +1,22 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7ac07f476d9cb074c9f9d24454b706f8, type: 3}
+  m_Name: JanetteQ1Prob
+  m_EditorClassIdentifier: 
+  characterQuestion: "People are more than what they seem, but I\u2019m just exhausted
+    trying to see it. What do you think?"
+  playerChoices:
+  - {fileID: 11400000, guid: 21c1fbb524218874f9de5706213e0e82, type: 2}
+  - {fileID: 11400000, guid: 939c05bc443e29b4fbf766662067c71a, type: 2}
+  - {fileID: 11400000, guid: 4dd4061a6fe50ba49a1d9577b0b08abc, type: 2}
+  - {fileID: 11400000, guid: 2ffff950244e466458d6e9efa9e95ee1, type: 2}
+  characterResponse: "I\u2019ll give it some thought."

@@ -1,0 +1,19 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 06cf4615c5d202a41862aa8b93a04f73, type: 3}
+  m_Name: LisaQuestion1Evil
+  m_EditorClassIdentifier: 
+  morality: 3
+  choice: 'What a ridiculous question. Of course not. '
+  response: "\rDear Fortune Teller, \n\r\nI knew this was a silly question, and I
+    suppose I shouldn\u2019t have wasted your time with it. But is it really so obvious
+    that I\u2019ll end up alone? Maybe I work too much\u2026\r\n"

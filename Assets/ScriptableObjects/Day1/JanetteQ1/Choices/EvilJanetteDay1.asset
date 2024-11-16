@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 06cf4615c5d202a41862aa8b93a04f73, type: 3}
+  m_Name: EvilJanetteDay1
+  m_EditorClassIdentifier: 
+  morality: 3
+  choice: "Give up on people. They\u2019re a lost race. "
+  response: "Hi, Fortune Teller, \r\n\r\nI hate to admit it, but you\u2019re speaking
+    to me right now. I\u2019m trying my best with the kids I teach, but the world\u2019s
+    deeply poisoned. I guess it\u2019s only a matter of time before they grow up
+    just like the other awful people in the world. What\u2019s the point then? \r\nI
+    really need to think. I think I\u2019ll cancel class today\u2026\r\n\r\nThanks\u2026\r\n"

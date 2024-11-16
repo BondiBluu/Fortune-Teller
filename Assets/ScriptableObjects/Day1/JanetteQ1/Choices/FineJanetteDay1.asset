@@ -1,0 +1,20 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 06cf4615c5d202a41862aa8b93a04f73, type: 3}
+  m_Name: FineJanetteDay1
+  m_EditorClassIdentifier: 
+  morality: 1
+  choice: 'There are good people and bad people. '
+  response: "Hi, Fortune Teller, \r\n\r\nI know you\u2019re right. There are good
+    people and bad people in the world. I\u2019m just tired of having to find out
+    which is which, you know? Is trial and error all I have? Oh well, it\u2019s a
+    50/50 chance\u2026 \r\n"

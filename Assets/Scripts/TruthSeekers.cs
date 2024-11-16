@@ -9,6 +9,7 @@ public class TruthSeekers : ScriptableObject
     [SerializeField] string cName;
     [SerializeField] string fact;
     [SerializeField] int age;
+    [SerializeField] char gender;
     [SerializeField] string occupation;
     [SerializeField] Choices problems;
     [SerializeField] Dictionary<string, AnimationClip> animations; // key: animation name, value: animation clip
@@ -17,6 +18,7 @@ public class TruthSeekers : ScriptableObject
     public string CName { get {return cName;} }
     public string Fact { get {return fact;} }
     public int Age { get {return age;} }
+    public char Gender {get {return gender;} }
     public string Occupation { get {return occupation;} }
     public Choices Problems { get {return problems;} } 
     public Dictionary<string, AnimationClip> Animations { get {return animations;} }

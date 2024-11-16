@@ -9,9 +9,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 920c1998ce03b2a4687d7c9af4dd51a7, type: 3}
-  m_Name: Day1
+  m_Script: {fileID: 11500000, guid: 06cf4615c5d202a41862aa8b93a04f73, type: 3}
+  m_Name: LisaQuestion1Fine
   m_EditorClassIdentifier: 
-  characters:
-  - {fileID: 11400000, guid: 4d0a9f4cd0e1a8f45a8c959a9d86e414, type: 2}
-  - {fileID: 11400000, guid: 4de7cc63e71da21408faa755c3146019, type: 2}
+  morality: 1
+  choice: Maybe someday.
+  response: "\rDear Fortune Teller,\n \r\nThanks for indulging my silly marriage
+    question. I suppose this was at least a little fun. \r\n"

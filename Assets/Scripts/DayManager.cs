@@ -11,6 +11,7 @@ public class DayManager : MonoBehaviour
     DialogueManager dialogueManager;
     MailManager mailManager;
     CutsceneManager cutsceneManager;
+    ChoiceManager choiceManager;
     public bool gameIsDone = false;
 
     void Start()
@@ -18,6 +19,7 @@ public class DayManager : MonoBehaviour
         dialogueManager = FindObjectOfType<DialogueManager>();
         mailManager = FindObjectOfType<MailManager>();
         cutsceneManager = FindObjectOfType<CutsceneManager>();
+        choiceManager = FindObjectOfType<ChoiceManager>();
     }
 
     //cycle through each character in a day
@@ -38,6 +40,7 @@ public class DayManager : MonoBehaviour
                 currentCharacter = 0;
                 nextMorningPanel.SetActive(true);
                 cutsceneManager.PlayScene(cutsceneManager.nextMorning);
+                choiceManager.InputTallies();
                 yield return new WaitForSeconds((float)cutsceneManager.nextMorning.duration + 1.0f);
                 nextMorningPanel.SetActive(false);
                 mailManager.EnableMailButton();

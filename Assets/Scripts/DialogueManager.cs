@@ -37,6 +37,7 @@ public class DialogueManager : MonoBehaviour
 
     public IEnumerator ComeIntoRoom()
     {
+        mailManager.DisableMailButton();
         EnableButtons();
         yield return new WaitForSeconds(1.0f);
         Debug.Log("Knock on door");

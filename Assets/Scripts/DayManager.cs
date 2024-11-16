@@ -39,6 +39,7 @@ public class DayManager : MonoBehaviour
                 cutsceneManager.PlayScene(cutsceneManager.nextMorning);
                 yield return new WaitForSeconds((float)cutsceneManager.nextMorning.duration + 1.0f);
                 nextMorningPanel.SetActive(false);
+                mailManager.EnableMailButton();
                 mailManager.CheckIfNewMail();
             }
             else

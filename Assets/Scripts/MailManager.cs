@@ -12,19 +12,29 @@ public class MailManager : MonoBehaviour
     [SerializeField] TMP_Text responseText;
     [SerializeField] Button buttonPrefab;
     [SerializeField] Button mailImage;
+    [SerializeField] Button closeMailButton;
     [SerializeField] Sprite mailEmpty;
     [SerializeField] Sprite mailNotif;
     public List<string> unreadMail = new List<string>();
     public List<string> readMail = new List<string>();
+    DialogueManager dialogueManager;
 
     void Awake(){
         responseContainer.SetActive(false);
         letterBox.SetActive(false);   
+        dialogueManager = FindObjectOfType<DialogueManager>();
     }
 
     public void OpenMessageList(){
+        closeMailButton.interactable = false;
         responseContainer.SetActive(true);
         GenerateButtons();
+    }
+
+    public void CloseMessageList(){
+        responseContainer.SetActive(false);
+        letterBox.SetActive(false);
+        StartCoroutine(dialogueManager.ComeIntoRoom());
     }
 
     public void GenerateButtons(){
@@ -51,7 +61,6 @@ public class MailManager : MonoBehaviour
     public void OpenLetter(string contents){
         letterBox.SetActive(true);
         responseText.text = contents;
-        
     }
 
     public void MakeUnreadLetterRead(string contents){
@@ -69,7 +78,16 @@ public class MailManager : MonoBehaviour
         } 
         else if(unreadMail.Count == 0){
             mailImage.GetComponent<Image>().sprite = mailEmpty;
+            closeMailButton.interactable = true;
         }
+    }
+
+    public void DisableMailButton(){
+        mailImage.interactable = false;
+    }
+
+    public void EnableMailButton(){
+        mailImage.interactable = true;
     }
 
 }

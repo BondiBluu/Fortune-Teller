@@ -713,7 +713,7 @@ MonoBehaviour:
   responseContainer: {fileID: 272970348}
   letterBox: {fileID: 1046698528}
   messageListContainer: {fileID: 1921855868}
-  charaResponse: {fileID: 1498027354}
+  responseText: {fileID: 1498027354}
   buttonPrefab: {fileID: 6797316868375928728, guid: f33a7c8c2567de044a5786b72bed7e2b, type: 3}
   unreadMail: []
   readMail: []

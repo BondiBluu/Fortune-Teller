@@ -717,6 +717,9 @@ MonoBehaviour:
   messageListContainer: {fileID: 1921855868}
   responseText: {fileID: 1498027354}
   buttonPrefab: {fileID: 6797316868375928728, guid: f33a7c8c2567de044a5786b72bed7e2b, type: 3}
+  mailImage: {fileID: 2102279879}
+  mailEmpty: {fileID: 21300000, guid: 56355a3bcae4a4c4780fa44671923440, type: 3}
+  mailNotif: {fileID: 21300000, guid: 13785d6f877e90a40a6f7f58ec2b0dac, type: 3}
   unreadMail: []
   readMail: []
 --- !u!1 &272970348
@@ -753,7 +756,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.08324852, y: 0.23}
   m_AnchorMax: {x: 0.91234213, y: 0.9077692}
-  m_AnchoredPosition: {x: -1.0102234, y: -0.47644043}
+  m_AnchoredPosition: {x: -1.0102234, y: -0.47644806}
   m_SizeDelta: {x: 1.2059326, y: 1.1729584}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &419364178
@@ -1480,7 +1483,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.020000001, y: 0}
   m_AnchorMax: {x: 0.3933841, y: 1}
-  m_AnchoredPosition: {x: 2.0000153, y: -0.42720032}
+  m_AnchoredPosition: {x: 2.0000153, y: -0.42720795}
   m_SizeDelta: {x: -1.7136841, y: -0.3952484}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1046698530
@@ -2309,12 +2312,13 @@ RectTransform:
   m_Children:
   - {fileID: 2013167158}
   - {fileID: 1954377849}
+  - {fileID: 2102279878}
   m_Father: {fileID: 219670869}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.78700006, y: 0.8331287}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 1.1999817, y: -20.728188}
-  m_SizeDelta: {x: 3.5283, y: 41.4564}
+  m_AnchoredPosition: {x: -1.7641, y: -34.693}
+  m_SizeDelta: {x: 3.5283, y: 69.385}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1564964331
 GameObject:
@@ -3001,7 +3005,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.078236975, y: 0.060684156}
   m_AnchorMax: {x: 0.92176306, y: 0.55620825}
-  m_AnchoredPosition: {x: 0.00019836426, y: -1.2300949}
+  m_AnchoredPosition: {x: 0.00019836426, y: -1.2301102}
   m_SizeDelta: {x: 3.216, y: 0.8167038}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1810364088
@@ -3719,7 +3723,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &2013167158
 RectTransform:
   m_ObjectHideFlags: 0
@@ -3776,6 +3780,138 @@ CanvasRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2013167157}
+  m_CullTransparentMesh: 1
+--- !u!1 &2102279877
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2102279878}
+  - component: {fileID: 2102279881}
+  - component: {fileID: 2102279880}
+  - component: {fileID: 2102279879}
+  m_Layer: 5
+  m_Name: OpenMailButton
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &2102279878
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2102279877}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1520001499}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.038203206, y: 0.043882884}
+  m_AnchorMax: {x: 0.9713476, y: 0.9473404}
+  m_AnchoredPosition: {x: 0.4505806, y: 0.49999237}
+  m_SizeDelta: {x: 2.901123, y: 1.7713928}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &2102279879
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2102279877}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Navigation:
+    m_Mode: 3
+    m_WrapAround: 0
+    m_SelectOnUp: {fileID: 0}
+    m_SelectOnDown: {fileID: 0}
+    m_SelectOnLeft: {fileID: 0}
+    m_SelectOnRight: {fileID: 0}
+  m_Transition: 1
+  m_Colors:
+    m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
+    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
+    m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
+    m_ColorMultiplier: 1
+    m_FadeDuration: 0.1
+  m_SpriteState:
+    m_HighlightedSprite: {fileID: 0}
+    m_PressedSprite: {fileID: 0}
+    m_SelectedSprite: {fileID: 0}
+    m_DisabledSprite: {fileID: 0}
+  m_AnimationTriggers:
+    m_NormalTrigger: Normal
+    m_HighlightedTrigger: Highlighted
+    m_PressedTrigger: Pressed
+    m_SelectedTrigger: Selected
+    m_DisabledTrigger: Disabled
+  m_Interactable: 1
+  m_TargetGraphic: {fileID: 2102279880}
+  m_OnClick:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 219670874}
+        m_TargetAssemblyTypeName: MailManager, Assembly-CSharp
+        m_MethodName: OpenMessageList
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &2102279880
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2102279877}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 21300000, guid: 56355a3bcae4a4c4780fa44671923440, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &2102279881
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2102279877}
   m_CullTransparentMesh: 1
 --- !u!1 &2123219721
 GameObject:

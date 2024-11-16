@@ -11,13 +11,15 @@ public class MailManager : MonoBehaviour
     [SerializeField] Transform messageListContainer;
     [SerializeField] TMP_Text responseText;
     [SerializeField] Button buttonPrefab;
+    [SerializeField] Button mailImage;
+    [SerializeField] Sprite mailEmpty;
+    [SerializeField] Sprite mailNotif;
     public List<string> unreadMail = new List<string>();
     public List<string> readMail = new List<string>();
 
     void Awake(){
         responseContainer.SetActive(false);
-        letterBox.SetActive(false);
-        
+        letterBox.SetActive(false);   
     }
 
     public void OpenMessageList(){
@@ -57,7 +59,17 @@ public class MailManager : MonoBehaviour
         OpenLetter(contents);
         unreadMail.Remove(contents);
         readMail.Add(contents);
+        CheckIfNewMail();
         GenerateButtons();
+    }
+
+    public void CheckIfNewMail(){
+        if(unreadMail.Count > 0){
+            mailImage.GetComponent<Image>().sprite = mailNotif;
+        } 
+        else if(unreadMail.Count == 0){
+            mailImage.GetComponent<Image>().sprite = mailEmpty;
+        }
     }
 
 }

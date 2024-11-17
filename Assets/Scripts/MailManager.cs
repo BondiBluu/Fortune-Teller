@@ -31,6 +31,7 @@ public class MailManager : MonoBehaviour
     public void OpenMessageList(){
         closeMailButton.interactable = false;
         responseContainer.SetActive(true);
+        CheckIfNewMail();
         GenerateButtons();
     }
 

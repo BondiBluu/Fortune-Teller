@@ -674,7 +674,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &272970349
 RectTransform:
   m_ObjectHideFlags: 0
@@ -2097,7 +2097,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &935084466
 RectTransform:
   m_ObjectHideFlags: 0
@@ -2802,8 +2802,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 25
-  m_fontSizeBase: 25
+  m_fontSize: 30
+  m_fontSizeBase: 30
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -2935,7 +2935,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1867906247}
         m_TargetAssemblyTypeName: MailManager, Assembly-CSharp
         m_MethodName: CloseMessageList
         m_Mode: 1
@@ -3245,8 +3245,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 12
-  m_fontSizeBase: 12
+  m_fontSize: 20
+  m_fontSizeBase: 20
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -3415,8 +3415,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 25
-  m_fontSizeBase: 25
+  m_fontSize: 30
+  m_fontSizeBase: 30
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -4513,10 +4513,10 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 2123219722}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.076000005, y: 0.07082437}
-  m_AnchorMax: {x: 0.9477649, y: 0.9363919}
-  m_AnchoredPosition: {x: -0.18450928, y: -0.49996948}
-  m_SizeDelta: {x: 0.7857971, y: 0.10119629}
+  m_AnchorMin: {x: 0, y: 0.07082437}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 2.8154907, y: -8.9999695}
+  m_SizeDelta: {x: -31.214203, y: -16.898804}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1921855869
 MonoBehaviour:
@@ -4806,7 +4806,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1867906247}
         m_TargetAssemblyTypeName: MailManager, Assembly-CSharp
         m_MethodName: OpenMessageList
         m_Mode: 1

@@ -30,7 +30,6 @@ public class DialogueManager : MonoBehaviour
         dayManager = FindObjectOfType<DayManager>();
         choiceManager = FindObjectOfType<ChoiceManager>();
         mailManager = FindObjectOfType<MailManager>();
-        character.SetActive(false);
         StartCoroutine(ComeIntoRoom());
         questionBox.SetActive(false);
     }

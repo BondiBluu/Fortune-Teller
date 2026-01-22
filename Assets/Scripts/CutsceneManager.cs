@@ -9,6 +9,7 @@ public class CutsceneManager : MonoBehaviour
     [SerializeField] PlayableDirector director;
     public TimelineAsset characterGoesIntoRoom;
     public TimelineAsset characterLeavesRoom;
+    public TimelineAsset characterNod;
     public TimelineAsset nextMorning;
     
     public void PlayScene(TimelineAsset cutscene)

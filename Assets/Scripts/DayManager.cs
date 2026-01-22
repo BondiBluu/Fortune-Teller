@@ -22,6 +22,13 @@ public class DayManager : MonoBehaviour
         choiceManager = FindObjectOfType<ChoiceManager>();
     }
 
+    public void ChangeCharacter(TruthSeekers character)
+    {
+        cutsceneManager.characterGoesIntoRoom = character.WalkInClip;
+        cutsceneManager.characterLeavesRoom = character.WalkOutClip;
+        cutsceneManager.characterNod = character.NodClip;
+    }
+
     //cycle through each character in a day
     public IEnumerator NextCharacter()
     {

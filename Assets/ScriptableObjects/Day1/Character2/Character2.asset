@@ -15,5 +15,11 @@ MonoBehaviour:
   cName: C2
   fact: Has, indeed, a fact
   age: 8
+  gender: 467
   occupation: Hm?
   problems: {fileID: 11400000, guid: f4b4bb0eca30d794281766f7a80660bf, type: 2}
+  frontSprite: {fileID: 0}
+  backSprite: {fileID: 0}
+  nodClip: {fileID: 0}
+  walkInClip: {fileID: 0}
+  walkOutClip: {fileID: 0}

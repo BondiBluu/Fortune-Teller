@@ -18,3 +18,8 @@ MonoBehaviour:
   gender: 70
   occupation: Teacher
   problems: {fileID: 11400000, guid: 33127f6637cd71c4f9b66624eb1ddb93, type: 2}
+  frontSprite: {fileID: -865237387, guid: aaa0f15365ebc7e47aae0a86824bccbb, type: 3}
+  backSprite: {fileID: 972812286, guid: aaa0f15365ebc7e47aae0a86824bccbb, type: 3}
+  nodClip: {fileID: 11400000, guid: 41caacd1fe8fffc42b180e033a10d6dc, type: 2}
+  walkInClip: {fileID: 11400000, guid: a869bb16c313bd0409af584e65ac3eeb, type: 2}
+  walkOutClip: {fileID: 11400000, guid: fa450d02c7c3dc44daabf1da7726c35c, type: 2}

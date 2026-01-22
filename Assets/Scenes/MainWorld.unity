@@ -309,7 +309,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_RaycastTarget: 0
+  m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
@@ -479,11 +479,6 @@ GameObject:
   - component: {fileID: 219670868}
   - component: {fileID: 219670867}
   - component: {fileID: 219670866}
-  - component: {fileID: 219670870}
-  - component: {fileID: 219670871}
-  - component: {fileID: 219670872}
-  - component: {fileID: 219670873}
-  - component: {fileID: 219670874}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -568,11 +563,11 @@ RectTransform:
   m_Children:
   - {fileID: 629926905}
   - {fileID: 1520001499}
-  - {fileID: 935084466}
   - {fileID: 272970349}
   - {fileID: 1966568278}
   - {fileID: 1265585179}
   - {fileID: 724751817}
+  - {fileID: 935084466}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
@@ -580,113 +575,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
---- !u!114 &219670870
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 219670865}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d4b71030f5ed7694694674bea9c76803, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  dialogueBox: {fileID: 1966568277}
-  dialogueText: {fileID: 1352981569}
-  nameText: {fileID: 1529092714}
-  questionBox: {fileID: 935084465}
-  characterName: {fileID: 1811360384}
-  charaOccupation: {fileID: 510846726}
-  charaFact: {fileID: 1611052772}
-  charaQuestion: {fileID: 1810364088}
-  choiceButtons:
-  - {fileID: 200854775}
-  - {fileID: 293407538}
-  - {fileID: 1203606658}
-  - {fileID: 1071038453}
---- !u!114 &219670871
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 219670865}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6162fd70e65d7f14abafcd0a7ef6942c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  director: {fileID: 50643021}
-  characterGoesIntoRoom: {fileID: 11400000, guid: e9c699df887b0a045951e55f66171c5d, type: 2}
-  characterLeavesRoom: {fileID: 11400000, guid: 5bcb686b3632e534f86d3163cfb18e29, type: 2}
-  characterNod: {fileID: 0}
-  nextMorning: {fileID: 11400000, guid: 5b1340c176b77d44095e6c46b35c9d5a, type: 2}
---- !u!114 &219670872
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 219670865}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 64fa4d1264f2e9b41b08de02122a90ee, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  days:
-  - {fileID: 11400000, guid: 37a2cc0b896e88242856cd194aeb39d7, type: 2}
-  - {fileID: 11400000, guid: 815afad8da80fd44e83dd47b5e4559f5, type: 2}
-  currentDay: 0
-  currentCharacter: 0
-  nextMorningPanel: {fileID: 1265585178}
-  gameIsDone: 0
---- !u!114 &219670873
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 219670865}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 12b28e15d454d9f47ad0b33df8d6d1d2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  goodChoiceTally: 0
-  fineChoiceTally: 0
-  badChoiceTally: 0
-  evilChoiceTally: 0
-  moonternSprite: {fileID: 629926904}
-  goodMoontern: {fileID: 21300000, guid: 083f7fb45001d744b8af7f19fe5d4d58, type: 3}
-  fineMoontern: {fileID: 21300000, guid: 2091fbcb8bd117849917698562d8d33f, type: 3}
-  badMoontern: {fileID: 21300000, guid: b638705ccdd6bcb4095f09cd93f07be5, type: 3}
-  evilMoontern: {fileID: 21300000, guid: 95d0fabc8c84ae74fb95a264b0c28944, type: 3}
---- !u!114 &219670874
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 219670865}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c27f557204a4f584ea37760869195e1a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  responseContainer: {fileID: 272970348}
-  letterBox: {fileID: 1046698528}
-  messageListContainer: {fileID: 1921855868}
-  responseText: {fileID: 1498027354}
-  buttonPrefab: {fileID: 6797316868375928728, guid: f33a7c8c2567de044a5786b72bed7e2b, type: 3}
-  mailImage: {fileID: 2102279879}
-  closeMailButton: {fileID: 1486114593}
-  mailEmpty: {fileID: 21300000, guid: 56355a3bcae4a4c4780fa44671923440, type: 3}
-  mailNotif: {fileID: 21300000, guid: 13785d6f877e90a40a6f7f58ec2b0dac, type: 3}
-  numberOfUnreadMailContainer: {fileID: 787370578}
-  numberOfUnreadMailText: {fileID: 216743004}
-  unreadMail: []
-  readMail: []
 --- !u!1 &269519819
 GameObject:
   m_ObjectHideFlags: 0
@@ -906,7 +794,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_RaycastTarget: 0
+  m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
@@ -1148,8 +1036,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 10
-  m_fontSizeBase: 10
+  m_fontSize: 17
+  m_fontSizeBase: 17
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -1282,8 +1170,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 10
-  m_fontSizeBase: 10
+  m_fontSize: 17
+  m_fontSizeBase: 17
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -1416,8 +1304,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 9.5
-  m_fontSizeBase: 9.5
+  m_fontSize: 20
+  m_fontSizeBase: 20
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -1957,8 +1845,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 10
-  m_fontSizeBase: 10
+  m_fontSize: 17
+  m_fontSizeBase: 17
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -2019,7 +1907,7 @@ GameObject:
   - component: {fileID: 724751819}
   - component: {fileID: 724751818}
   m_Layer: 5
-  m_Name: Image
+  m_Name: DialogueAnswerPanel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2058,7 +1946,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_RaycastTarget: 1
+  m_RaycastTarget: 0
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
@@ -2202,13 +2090,14 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 935084466}
+  - component: {fileID: 935084467}
   m_Layer: 5
   m_Name: QuestionBox
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &935084466
 RectTransform:
   m_ObjectHideFlags: 0
@@ -2233,6 +2122,18 @@ RectTransform:
   m_AnchoredPosition: {x: -0.98413086, y: -0.26501465}
   m_SizeDelta: {x: 1.0206985, y: 4.9799995}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!225 &935084467
+CanvasGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 935084465}
+  m_Enabled: 1
+  m_Alpha: 1
+  m_Interactable: 1
+  m_BlocksRaycasts: 1
+  m_IgnoreParentGroups: 0
 --- !u!1 &936598396
 GameObject:
   m_ObjectHideFlags: 0
@@ -2490,7 +2391,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_RaycastTarget: 0
+  m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
@@ -2611,7 +2512,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_RaycastTarget: 0
+  m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
@@ -2653,7 +2554,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1265585179
 RectTransform:
   m_ObjectHideFlags: 0
@@ -2688,7 +2589,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
   m_Color: {r: 0, g: 0, b: 0, a: 0}
-  m_RaycastTarget: 1
+  m_RaycastTarget: 0
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
@@ -3034,7 +2935,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 219670874}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: MailManager, Assembly-CSharp
         m_MethodName: CloseMessageList
         m_Mode: 1
@@ -3152,7 +3053,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_RaycastTarget: 1
+  m_RaycastTarget: 0
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
@@ -3616,6 +3517,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Teacher
       objectReference: {fileID: 0}
+    - target: {fileID: 6420233609428483583, guid: 68ad667c2c282a14786fa60208b9b561, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -3839,8 +3744,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 9.5
-  m_fontSizeBase: 9.5
+  m_fontSize: 20
+  m_fontSizeBase: 20
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -3940,7 +3845,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_RaycastTarget: 1
+  m_RaycastTarget: 0
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
@@ -4116,8 +4021,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 9.5
-  m_fontSizeBase: 9.5
+  m_fontSize: 20
+  m_fontSizeBase: 20
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -4250,8 +4155,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 9
-  m_fontSizeBase: 9
+  m_fontSize: 20
+  m_fontSizeBase: 20
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -4300,6 +4205,149 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1811360382}
   m_CullTransparentMesh: 1
+--- !u!1 &1867906246
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1867906252}
+  - component: {fileID: 1867906251}
+  - component: {fileID: 1867906250}
+  - component: {fileID: 1867906249}
+  - component: {fileID: 1867906248}
+  - component: {fileID: 1867906247}
+  m_Layer: 0
+  m_Name: Manager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1867906247
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1867906246}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c27f557204a4f584ea37760869195e1a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  responseContainer: {fileID: 272970348}
+  letterBox: {fileID: 1046698528}
+  messageListContainer: {fileID: 1921855868}
+  responseText: {fileID: 1498027354}
+  buttonPrefab: {fileID: 6797316868375928728, guid: f33a7c8c2567de044a5786b72bed7e2b, type: 3}
+  mailImage: {fileID: 2102279879}
+  closeMailButton: {fileID: 1486114593}
+  mailEmpty: {fileID: 21300000, guid: 56355a3bcae4a4c4780fa44671923440, type: 3}
+  mailNotif: {fileID: 21300000, guid: 13785d6f877e90a40a6f7f58ec2b0dac, type: 3}
+  numberOfUnreadMailContainer: {fileID: 787370578}
+  numberOfUnreadMailText: {fileID: 216743004}
+  unreadMail: []
+  readMail: []
+--- !u!114 &1867906248
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1867906246}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 12b28e15d454d9f47ad0b33df8d6d1d2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  goodChoiceTally: 0
+  fineChoiceTally: 0
+  badChoiceTally: 0
+  evilChoiceTally: 0
+  moonternSprite: {fileID: 629926904}
+  goodMoontern: {fileID: 21300000, guid: 083f7fb45001d744b8af7f19fe5d4d58, type: 3}
+  fineMoontern: {fileID: 21300000, guid: 2091fbcb8bd117849917698562d8d33f, type: 3}
+  badMoontern: {fileID: 21300000, guid: b638705ccdd6bcb4095f09cd93f07be5, type: 3}
+  evilMoontern: {fileID: 21300000, guid: 95d0fabc8c84ae74fb95a264b0c28944, type: 3}
+--- !u!114 &1867906249
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1867906246}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 64fa4d1264f2e9b41b08de02122a90ee, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  days:
+  - {fileID: 11400000, guid: 37a2cc0b896e88242856cd194aeb39d7, type: 2}
+  - {fileID: 11400000, guid: 815afad8da80fd44e83dd47b5e4559f5, type: 2}
+  currentDay: 0
+  currentCharacter: 0
+  nextMorningPanel: {fileID: 1265585178}
+  gameIsDone: 0
+--- !u!114 &1867906250
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1867906246}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6162fd70e65d7f14abafcd0a7ef6942c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  director: {fileID: 50643021}
+  characterGoesIntoRoom: {fileID: 11400000, guid: e9c699df887b0a045951e55f66171c5d, type: 2}
+  characterLeavesRoom: {fileID: 11400000, guid: 5bcb686b3632e534f86d3163cfb18e29, type: 2}
+  characterNod: {fileID: 0}
+  nextMorning: {fileID: 11400000, guid: 5b1340c176b77d44095e6c46b35c9d5a, type: 2}
+--- !u!114 &1867906251
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1867906246}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d4b71030f5ed7694694674bea9c76803, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogueBox: {fileID: 1966568277}
+  dialogueText: {fileID: 1352981569}
+  nameText: {fileID: 1529092714}
+  questionBox: {fileID: 935084465}
+  characterName: {fileID: 1811360384}
+  charaOccupation: {fileID: 510846726}
+  charaFact: {fileID: 1611052772}
+  charaQuestion: {fileID: 1810364088}
+  choiceButtons:
+  - {fileID: 200854775}
+  - {fileID: 293407538}
+  - {fileID: 1203606658}
+  - {fileID: 1071038453}
+--- !u!4 &1867906252
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1867906246}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1918225741
 GameObject:
   m_ObjectHideFlags: 0
@@ -4384,8 +4432,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 10
-  m_fontSizeBase: 10
+  m_fontSize: 17
+  m_fontSizeBase: 17
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -4758,7 +4806,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 219670874}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: MailManager, Assembly-CSharp
         m_MethodName: OpenMessageList
         m_Mode: 1
@@ -4895,3 +4943,4 @@ SceneRoots:
   - {fileID: 2007584159}
   - {fileID: 657154570}
   - {fileID: 50643022}
+  - {fileID: 1867906252}

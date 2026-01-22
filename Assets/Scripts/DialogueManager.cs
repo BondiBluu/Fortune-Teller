@@ -65,9 +65,7 @@ public class DialogueManager : MonoBehaviour
 
             choiceButtons[i].onClick.RemoveAllListeners();
             choiceButtons[i].onClick.AddListener(() => StartCoroutine(AnswerQuestion(day, character, choiceIndex)));
-            Debug.Log($"Finished for loop {i + 1}");
         }
-        StartCoroutine(AnswerQuestion(day, character, 1));
 
     }
 
@@ -129,12 +127,6 @@ public class DialogueManager : MonoBehaviour
         foreach(Button button in choiceButtons){
             button.interactable = true;
         }
-    }
-
-    public IEnumerator PlayScene(TimelineAsset scene){
-        cutsceneManager.PlayScene(scene);
-        yield return new WaitForSeconds((float)scene.duration + 1.0f);
-        
     }
 }
 

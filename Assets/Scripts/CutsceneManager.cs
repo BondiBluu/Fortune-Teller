@@ -11,7 +11,7 @@ public class CutsceneManager : MonoBehaviour
     public TimelineAsset characterLeavesRoom;
     public TimelineAsset characterNod;
     public TimelineAsset nextMorning;
-    
+
     public void PlayScene(TimelineAsset cutscene)
     {
         //assigning the timeline asset to the director

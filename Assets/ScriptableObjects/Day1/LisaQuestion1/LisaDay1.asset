@@ -18,3 +18,8 @@ MonoBehaviour:
   gender: 70
   occupation: Doctor
   problems: {fileID: 11400000, guid: 27b5853e28a8d8044af75d765f3ce6bf, type: 2}
+  frontSprite: {fileID: -808510232, guid: 09097e04dc18dd247adc6d8bbe89411c, type: 3}
+  backSprite: {fileID: -1363695610, guid: 09097e04dc18dd247adc6d8bbe89411c, type: 3}
+  nodClip: {fileID: 11400000, guid: b6c92242c849a574e8b37c1c74a5d4f6, type: 2}
+  walkInClip: {fileID: 11400000, guid: f48adbdfc686b1d4087d82822098e73a, type: 2}
+  walkOutClip: {fileID: 11400000, guid: 67067828f2e0b4d45b7ae28385ba7d41, type: 2}

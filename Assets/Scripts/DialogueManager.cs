@@ -8,7 +8,6 @@ using UnityEngine.UI;
 
 public class DialogueManager : MonoBehaviour
 {
-    [SerializeField] GameObject character;
     public GameObject dialogueBox;
     public TMP_Text dialogueText;
     public TMP_Text nameText;
@@ -30,6 +29,7 @@ public class DialogueManager : MonoBehaviour
         dayManager = FindObjectOfType<DayManager>();
         choiceManager = FindObjectOfType<ChoiceManager>();
         mailManager = FindObjectOfType<MailManager>();
+        cutsceneManager.ChangeCharacter(dayManager.days[0].Characters[0]);
         StartCoroutine(ComeIntoRoom());
         questionBox.SetActive(false);
     }
@@ -42,7 +42,6 @@ public class DialogueManager : MonoBehaviour
             EnableButtons();
             yield return new WaitForSeconds(1.0f);
             Debug.Log("Knock on door");
-            character.SetActive(true);
             cutsceneManager.PlayScene(cutsceneManager.characterGoesIntoRoom);
             yield return new WaitForSeconds((float)cutsceneManager.characterGoesIntoRoom.duration + 1.0f);
             DisplayAdviceBox(dayManager.currentDay, dayManager.currentCharacter);
@@ -50,6 +49,7 @@ public class DialogueManager : MonoBehaviour
     }
 
     public void DisplayAdviceBox(int day, int character){
+        Debug.Log("Display Advice");
         questionBox.SetActive(true);
         Day currentDay = dayManager.days[day];
         TruthSeekers currentCharacter = currentDay.Characters[character];
@@ -58,13 +58,17 @@ public class DialogueManager : MonoBehaviour
         charaFact.text = currentDay.Characters[character].Fact;
         charaQuestion.text = currentDay.Characters[character].Problems.CharacterQuestion;
 
+        Debug.Log("Entering for loop");
         for(int i = 0; i < choiceButtons.Length; i++){
             int choiceIndex = i;
             choiceButtons[i].GetComponentInChildren<TMP_Text>().text = currentDay.Characters[character].Problems.PlayerChoices[i].Choice;
 
             choiceButtons[i].onClick.RemoveAllListeners();
             choiceButtons[i].onClick.AddListener(() => StartCoroutine(AnswerQuestion(day, character, choiceIndex)));
+            Debug.Log($"Finished for loop {i + 1}");
         }
+        StartCoroutine(AnswerQuestion(day, character, 1));
+
     }
 
     public IEnumerator AnswerQuestion(int day, int character, int choice){
@@ -106,11 +110,11 @@ public class DialogueManager : MonoBehaviour
     }
 
     public IEnumerator LeaveRoom(){
-        yield return new WaitForSeconds(3.0f);
+        cutsceneManager.PlayScene(cutsceneManager.characterNod);
+        yield return new WaitForSeconds((float)cutsceneManager.characterNod.duration);
         dialogueBox.SetActive(false);
         cutsceneManager.PlayScene(cutsceneManager.characterLeavesRoom);
         yield return new WaitForSeconds((float)cutsceneManager.characterLeavesRoom.duration + 1.0f);
-        character.SetActive(false);
 
         StartCoroutine(dayManager.NextCharacter());
     }

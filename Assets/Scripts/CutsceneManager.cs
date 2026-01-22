@@ -20,4 +20,11 @@ public class CutsceneManager : MonoBehaviour
         //playing the cutscene
         director.Play();
     }
+
+      public void ChangeCharacter(TruthSeekers character)
+    {
+        characterGoesIntoRoom = character.WalkInClip;
+        characterLeavesRoom = character.WalkOutClip;
+        characterNod = character.NodClip;
+    }
 }

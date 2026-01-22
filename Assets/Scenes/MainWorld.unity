@@ -149,7 +149,7 @@ PlayableDirector:
   m_GameObject: {fileID: 50643020}
   m_Enabled: 1
   serializedVersion: 3
-  m_PlayableAsset: {fileID: 11400000, guid: 1f8a7b6e8d1131945b1390476f207249, type: 2}
+  m_PlayableAsset: {fileID: 0}
   m_InitialState: 1
   m_WrapMode: 2
   m_DirectorUpdateMode: 1
@@ -309,7 +309,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_RaycastTarget: 1
+  m_RaycastTarget: 0
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
@@ -484,7 +484,6 @@ GameObject:
   - component: {fileID: 219670872}
   - component: {fileID: 219670873}
   - component: {fileID: 219670874}
-  - component: {fileID: 219670875}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -593,7 +592,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d4b71030f5ed7694694674bea9c76803, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  character: {fileID: 0}
   dialogueBox: {fileID: 1966568277}
   dialogueText: {fileID: 1352981569}
   nameText: {fileID: 1529092714}
@@ -622,6 +620,7 @@ MonoBehaviour:
   director: {fileID: 50643021}
   characterGoesIntoRoom: {fileID: 11400000, guid: e9c699df887b0a045951e55f66171c5d, type: 2}
   characterLeavesRoom: {fileID: 11400000, guid: 5bcb686b3632e534f86d3163cfb18e29, type: 2}
+  characterNod: {fileID: 0}
   nextMorning: {fileID: 11400000, guid: 5b1340c176b77d44095e6c46b35c9d5a, type: 2}
 --- !u!114 &219670872
 MonoBehaviour:
@@ -688,19 +687,6 @@ MonoBehaviour:
   numberOfUnreadMailText: {fileID: 216743004}
   unreadMail: []
   readMail: []
---- !u!114 &219670875
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 219670865}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e65d2d6d80dab514e8a68a6b7bf6f6f4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  truthSeekers: []
 --- !u!1 &269519819
 GameObject:
   m_ObjectHideFlags: 0
@@ -920,7 +906,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_RaycastTarget: 1
+  m_RaycastTarget: 0
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
@@ -2504,7 +2490,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_RaycastTarget: 1
+  m_RaycastTarget: 0
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
@@ -2625,7 +2611,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_RaycastTarget: 1
+  m_RaycastTarget: 0
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
@@ -3441,7 +3427,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.7785791, y: 0.574106}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0.23590088, y: -0.19300842}
+  m_AnchoredPosition: {x: 0.23590088, y: -0.19299316}
   m_SizeDelta: {x: -0.4716997, y: 0.38500214}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1529092712
@@ -3588,11 +3574,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 4840121991954529327, guid: 68ad667c2c282a14786fa60208b9b561, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: -2.25
       objectReference: {fileID: 0}
     - target: {fileID: 4840121991954529327, guid: 68ad667c2c282a14786fa60208b9b561, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -3.87
+      value: -6.34
       objectReference: {fileID: 0}
     - target: {fileID: 4840121991954529327, guid: 68ad667c2c282a14786fa60208b9b561, type: 3}
       propertyPath: m_LocalPosition.z
@@ -4603,11 +4589,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6656082836249128294, guid: cab68056cb2851840a6109b1dca987db, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: -1.27
       objectReference: {fileID: 0}
     - target: {fileID: 6656082836249128294, guid: cab68056cb2851840a6109b1dca987db, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: -6.1
       objectReference: {fileID: 0}
     - target: {fileID: 6656082836249128294, guid: cab68056cb2851840a6109b1dca987db, type: 3}
       propertyPath: m_LocalPosition.z

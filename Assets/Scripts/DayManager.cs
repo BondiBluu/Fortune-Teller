@@ -22,13 +22,6 @@ public class DayManager : MonoBehaviour
         choiceManager = FindObjectOfType<ChoiceManager>();
     }
 
-    public void ChangeCharacter(TruthSeekers character)
-    {
-        cutsceneManager.characterGoesIntoRoom = character.WalkInClip;
-        cutsceneManager.characterLeavesRoom = character.WalkOutClip;
-        cutsceneManager.characterNod = character.NodClip;
-    }
-
     //cycle through each character in a day
     public IEnumerator NextCharacter()
     {
@@ -36,6 +29,8 @@ public class DayManager : MonoBehaviour
         if(currentCharacter < days[currentDay].Characters.Count - 1)
         {
             currentCharacter++;
+            TruthSeekers nextCharacter = days[currentDay].Characters[currentCharacter];
+            cutsceneManager.ChangeCharacter(nextCharacter);
             StartCoroutine(dialogueManager.ComeIntoRoom());
         }
         else
